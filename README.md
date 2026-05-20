@@ -1,8 +1,6 @@
-# AI-First CRM for HCP Interaction Management
+# AI-First CRM HCP Module – Log Interaction Screen
 
 ## Project Overview
-
-AI-First CRM is a conversational Healthcare Professional (HCP) interaction management system designed for pharmaceutical field representatives.
 
 The project combines a structured CRM interface with an AI-powered assistant that enables users to log, edit, retrieve, and analyze HCP interactions using natural language.
 
@@ -140,14 +138,6 @@ PostgreSQL Database
 
 - Groq API
 - llama-3.3-70b-versatile
-
----
-
-## Deployment
-
-- Vercel (Frontend)
-- Render (Backend)
-- Neon PostgreSQL
 
 ---
 
@@ -379,7 +369,7 @@ Create a PostgreSQL database.
 ### Example
 
 ```sql
-CREATE DATABASE ai_crm;
+CREATE DATABASE ai_first_crm;
 ```
 
 Update the `.env` file with the PostgreSQL connection string.
@@ -452,96 +442,9 @@ Suggest next action for Dr. Emily Carter
 Check compliance risk: This medicine guarantees complete cure.
 ```
 
----
-
-# Deployment Guide
-
-# Backend Deployment (Render)
-
-## Build Command
-
-```bash
-pip install -r requirements.txt
-```
 
 ---
 
-## Start Command
-
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 10000
-```
-
----
-
-## Environment Variables
-
-```env
-DATABASE_URL
-GROQ_API_KEY
-```
-
----
-
-# Frontend Deployment (Vercel)
-
-Update the API base URL before deployment.
-
-### Example
-
-```javascript
-baseURL: "https://your-backend-url.onrender.com"
-```
-
-Deploy the frontend using Vercel.
-
----
-
-# Key Learnings
-
-- AI workflow orchestration using LangGraph
-- Conversational CRM architecture
-- LLM-based structured data extraction
-- FastAPI backend development
-- PostgreSQL integration
-- Redux state management
-- Prompt engineering
-- Enterprise AI system design
-- Full-stack deployment workflow
-
----
-
-# Challenges Faced
-
-## Model Availability
-
-The originally suggested Gemma model became unavailable.
-
-### Solution
-
-Switched to `llama-3.3-70b-versatile`.
-
----
-
-## Frontend Synchronization
-
-AI updates were not properly syncing with the UI.
-
-### Solution
-
-Implemented Redux centralized state management.
-
----
-
-## Database Validation Issues
-
-Null values caused insertion failures.
-
-### Solution
-
-Improved extraction validation and backend handling.
-
----
 
 # Future Improvements
 
